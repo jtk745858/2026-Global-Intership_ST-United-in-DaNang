@@ -12,6 +12,9 @@ def scan_port(ip, port):
     sock.close()
     
 if __name__ == "__main__":
+    print("-" * 50)
+    print("Simple port Scanner v1.0  - Starting")
+    print("-" * 50)
     target = input("Enter the target IP address:")
     ports = [21, 22, 23, 80, 443, 8080]
     
