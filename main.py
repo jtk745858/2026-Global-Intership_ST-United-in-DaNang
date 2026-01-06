@@ -7,7 +7,8 @@ def scan_port(ip, port):
     
     if result == 0:
         print(f"[+] Port {port} is OPEN")
-        
+    else:
+        print(f"[-] Port {port} is CLOSED")
     sock.close()
     
 if __name__ == "__main__":
