@@ -10,10 +10,12 @@ def scan_port(ip, port):
         
     sock.close()
     
-# port list
-target_ip = "127.0.0.1"
-ports = [21, 22, 80, 445, 8080]
-
-print(f"Scanning {target_ip} ...")
-for port in ports:
-    scan_port(target_ip, port)
+if __name__ == "__main__":
+    target = input("Enter the target IP address:")
+    ports = [21, 22, 23, 80, 443, 8080]
+    
+    print(f"\nStarting port scan on {target}...\n")
+    for port in ports:
+        scan_port(target, port)
+    
+    print("Scan Completed.")
